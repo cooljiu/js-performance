@@ -40,11 +40,11 @@ const durationFunc = function (name) {
 		if(data.name == testName) num = i
 	});
 	let duration = performance.getEntriesByType('measure')[num].duration;
-	duration = (duration * 0.001).toFixed(3);
-	return duration + 's';
+	duration = duration.toFixed(3);
+	return duration + 'ms';
 }
 
-console.log('test1=' + durationFunc('test1'));
-console.log('test2='+durationFunc('test2'));
+console.log('test1 = ' + durationFunc('test1'));
+console.log('test2 = '+durationFunc('test2'));
 
 
